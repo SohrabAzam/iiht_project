@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="css/signup.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+       <div class="card card-container">
+          <header>
+           <div class="login-head">
+              <h1 class="login-head-content"><i class="fa fa-pencil-square-o
+"></i>  User Registration</h1>
+           </div>
+           </header>
+           <form class="form-signin">
+               <span id="reauth-email" class="reauth-email"></span>
+               <input type="text" id="inputFirstname" class="form-control" placeholder="First name" required autofocus>
+               <input type="text" id="inputLastNme" class="form-control" placeholder="Last name" required>
+               <input type="text" id="inputCountry" class="form-control" placeholder="Country" required>
+               <input type="text" id="inputCity" class="form-control" placeholder="City" required>
+               <input type="text" id="inputDob" class="form-control" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+             <span id="reauth-email" class="reauth-email"></span>
+               <h5>Gender : </h5>
+               <input type="radio" name="gender" value="male" required> Male &nbsp;
+               <input type="radio" name="gender" value="female" required> Female &nbsp;
+               <input type="radio" name="gender" value="others" required> Others
+             <span id="reauth-email" class="reauth-email"></span>
+              <input type="password" id="inputEmail" class="form-control" placeholder="Email" required>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" id="inputCPassword" class="form-control" placeholder="Confirm password" required>
+               <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
+           </form>
+           <a href="#" class="signup">Already Registered? Sign in</a>
+       </div>
+    </div>
+</body>
+</html>
