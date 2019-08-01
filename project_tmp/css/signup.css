@@ -22,8 +22,27 @@ body, html {
     -webkit-user-select: none;
     user-select: none;
     cursor: default;
+    
+}
+.nav-pills >li >a {
+    text-align: center;
+   
+}
+.nav-pills > li > a {
+    background-color: rgb(141, 145, 255);
+    color: aliceblue;
+    padding: 20px  47px;
+    max-width: 500px;
 }
 
+.nav-pills > li > a:hover {
+    background-color: rgb(146, 120, 255);
+    color: aliceblue;
+    
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus {
+    background-color: rgb(106, 76, 147);
+}
 /*
  * Card component
  */
