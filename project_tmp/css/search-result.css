@@ -5,17 +5,19 @@
  * General styles
  */
 body, html {
-     height: 100%;
-    background-repeat: no-repeat;
-    background-size:auto;
-    
-    background-color: #130f40;
-    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+         
+  height:100vh;
+   
+   background-color: #4834d4;
+background-image: linear-gradient(315deg, #4834d4 0%, #0c0c0c 74%);
+    background-size:cover;
+     background-repeat: no-repeat;
 }
 
 .card-container.card {
-    max-width: 350px;
+    max-width: 100%;
     padding: 40px 40px;
+
 }
 
 .btn {
@@ -31,7 +33,7 @@ body, html {
  * Card component
  */
 .card {
-    background-color: #F7F7F7;
+   background-color: #F7F7F7;
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
@@ -43,6 +45,9 @@ body, html {
     -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+     max-width: 80%;
+    text-align: center;
+    
 }
 
 
@@ -93,7 +98,8 @@ body, html {
 .form-signin input[type=email],
 .form-signin input[type=password],
 .form-signin input[type=text],
-.form-signin button {
+.form-signin button,
+.form-signin select{
     width: 100%;
     display: block;
     margin-bottom: 12px;
@@ -144,4 +150,76 @@ body, html {
 .signup:active,
 .signup:focus{
     color: rgb(108, 0, 255);
+}
+
+/*
+* CARD PROFILE
+*/
+.card {
+  background-color: #F7F7F7;
+    /* just in case there no content*/
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+     max-width: 80%;
+    text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+.propic {
+    text-align: center;
+}
+
+/*
+*tables
+*/
+
+.details{
+padding-top: 20px;
+  border: 2;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  background: white;
+ 
+}
+.imgDetail
+{
+	 border: 2;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  background: white;
+	
 }

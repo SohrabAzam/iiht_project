@@ -5,9 +5,14 @@
  * General styles
  */
 body, html {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(162, 104, 149), rgb(22, 12, 97));
+    
+    
+  height:100vh;
+   
+    background-color: #130f40;
+    background-image: linear-gradient(315deg, #130f40 0%, #000000 74%);
+    background-size:cover;
+     background-repeat: no-repeat;
 }
 
 .card-container.card {
