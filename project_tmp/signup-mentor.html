@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="css/signup.css" rel="stylesheet">
+
+<link href="css/signup-mentor.css" rel="stylesheet">
+ <SCRIPT language="javascript">
+var rowNo = 0;
+        function addRow(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ rowNo++;
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var cell1 = row.insertCell(0);
+            var element1 = document.createElement("input");
+            element1.type = "checkbox";
+            element1.name="chkbox[]";
+	    element1.style.width="80px";
+            cell1.appendChild(element1);	
+ 
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML =  rowNo;
+ 
+           var cell3 = row.insertCell(2);
+
+	if(rowNo%2==0)
+	{
+            var element2 = document.createElement("input");
+            element2.type = "text";
+            element2.name = "txtbox[]";
+		element2.style.color="#00FF00";
+            cell3.appendChild(element2);
+	}
+	else
+	{
+		cell3.innerHTML = "NONE";
+	}
+ 
+ 
+var cell4 = row.insertCell(3);
+            cell4.innerHTML =  'remarks'+rowNo;
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+ 
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+ 
+ 
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+ 
+    </SCRIPT>
+</head>
+<body>
+    <div class="container">
+       <div class="card card-container">
+           
+<header>
+           <div class="login-head">
+              <h1 class="login-head-content"><i class="fa fa-pencil-square-o
+"></i>  Mentor Registration</h1>
+           </div>
+           </header>
+           <form class="form-signin">
+               <span id="reauth-email" class="reauth-email"></span>
+               <input type="text" id="inputFirstname" class="form-control" placeholder="First name" required autofocus>
+               <input type="text" id="inputLastNme" class="form-control" placeholder="Last name" required>
+               <input type="text" id="inputCountry" class="form-control" placeholder="Country" required>
+               <input type="text" id="inputCity" class="form-control" placeholder="City" required>
+               <input type="text" id="inputDob" class="form-control" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')" required>
+             <span id="reauth-email" class="reauth-email"></span>
+               <h5>Gender : </h5>
+               <input type="radio" name="gender" value="male" required> Male &nbsp;
+               <input type="radio" name="gender" value="female" required> Female &nbsp;
+               <input type="radio" name="gender" value="others" required> Others
+             <span id="reauth-email" class="reauth-email"></span>
+               <span id="reauth-email" class="reauth-email"></span>
+             <h5>Add Speciality : </h5>
+              <INPUT type="button" class="btn btn-lg btn-primary btn-signin btn-sp"  value="Add Row" onclick="addRow('dataTable')" />
+ 
+    <INPUT type="button" class="btn btn-lg btn-primary btn-signin btn-sp"  value="Delete Row" onclick="deleteRow('dataTable')" />
+     <br/> <span id="reauth-email" class="reauth-email"></span>
+    <TABLE   id="dataTable" width="350px" border="1">
+        <TR>
+            <TD><INPUT type="checkbox" name="chk"/></TD>
+            <TD> 1 </TD>
+            <TD> <INPUT type="text" class="form-control"  id="first" /> </TD>
+		<TD> Remarks </TD>
+        </TR>
+    </TABLE>
+
+<br><br>
+   
+              <input type="password" id="inputEmail" class="form-control" placeholder="Email" required>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" id="inputCPassword" class="form-control" placeholder="Confirm password" required>
+               <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
+           </form>
+           <a href="#" class="signup">Already Registered? Sign in</a>
+       </div>
+    </div>
+</body>
+</html>
